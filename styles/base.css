@@ -1,0 +1,160 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+/* |-| CSS VARIABLES */
+:root {
+  /* Fonts */
+  --heading-font: Oswald, sans-serif;
+  --para-font: Asap, sans-serif;
+
+  /* Colors */
+  --cerulean: #086788;
+  --blue-green: #07a0c3;
+  --jonquil: #f0c808;
+  --papaya-whip: #fff1d0;
+  --rojo: #dd1c1a;
+  --white: #fff;
+  --midnight-green: #093e4a;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| GENERIC STYLES */
+* {
+  box-sizing: border-box;
+  font-family: var(--para-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+/* ----------------------------------------------- */
+
+/* |-| HEADER */
+header {
+  background-color: var(--cerulean);
+}
+
+.title-heading {
+  color: var(--papaya-whip);
+  margin: 0;
+  padding: 2rem;
+  text-align: center;
+}
+
+.navigation {
+  background-color: var(--jonquil);
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  font-size: 1.2rem;
+}
+
+.navigation a {
+  color: var(--midnight-green);
+  padding: 1rem 1.3rem;
+  text-decoration: none;
+  transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+  background-color: var(--blue-green);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| MAIN */
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+  width: 80%;
+  margin: 2rem auto;
+}
+
+.card {
+  border: 1px solid #cdcccc;
+  border-radius: 5px;
+}
+
+.card h2 {
+  text-align: center;
+  margin: 0 0 1.5rem 0;
+  padding: 1rem 0;
+  background-color: var(--cerulean);
+  color: var(--papaya-whip);
+}
+
+.card p {
+  padding: 0 1.5rem;
+}
+
+.profile-image {
+  float: right;
+  margin: 0 1.3rem;
+}
+
+h2.town-heading {
+  background-color: var(--white);
+  color: #000;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px solid #7a7676;
+}
+
+.flag-image {
+  float: left;
+  margin: 0 1.3rem 1.3rem 1.3rem;
+}
+
+/* Fixes floating element getting out of its parent container */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.dev-resource-list li {
+  line-height: 2;
+}
+
+.dev-resource-list a {
+  text-decoration: none;
+}
+
+.dev-resource-list a:hover {
+  text-decoration: underline;
+}
+
+.dev-resource-list a:visited {
+  color: var(--rojo);
+}
+
+/* ----------------------------------------------- */
+
+/* |-| FOOTER */
+footer {
+  background-color: var(--cerulean);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+footer p {
+  color: var(--papaya-whip);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.last-modified::before {
+  content: "Modification: ";
+}
