@@ -35,10 +35,15 @@ nav a {
 main {
   grid-column: 1 / 3;
   grid-row: 2 / 3;
-  height: 395px;
+  height: 550px;
   background-color: #cccccc;
   padding: 10px;
   color: #040404;
+}
+
+.computer-image {
+  display: block;
+  margin: 0 auto;
 }
 
 aside {
