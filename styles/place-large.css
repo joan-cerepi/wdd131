@@ -1,0 +1,46 @@
+@media screen and (min-width: 1000px) {
+  main {
+    position: relative;
+  }
+
+  .data {
+    background-color: #ffffff;
+    opacity: 0.9;
+    position: absolute;
+    border-bottom: none;
+    top: 3.5rem;
+    left: 3.5rem;
+  }
+
+  .data h2,
+  .weather h2 {
+    background-color: var(--jonquil);
+    color: var(--midnight-green);
+    margin-top: 1rem;
+    margin-left: -1rem;
+    width: 90%;
+    padding: 0.8rem 1rem;
+    text-align: left;
+  }
+
+  .data table,
+  .weather table {
+    margin: 1.5rem;
+  }
+
+  .weather {
+    position: absolute;
+    opacity: 0.9;
+    bottom: 3.5rem;
+    right: 3.5rem;
+    background-color: #ffffff;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+  }
+
+  .weather-icon {
+    display: none;
+  }
+}

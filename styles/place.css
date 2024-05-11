@@ -1,0 +1,104 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+/* |-| CSS VARIABLES */
+:root {
+  /* Fonts */
+  --heading-font: Oswald, sans-serif;
+  --para-font: Asap, sans-serif;
+
+  /* Colors */
+  --cerulean: #086788;
+  --blue-green: #07a0c3;
+  --jonquil: #f0c808;
+  --papaya-whip: #fff1d0;
+  --rojo: #dd1c1a;
+  --white: #fff;
+  --midnight-green: #093e4a;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| GENERIC STYLES */
+* {
+  box-sizing: border-box;
+  font-family: var(--para-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+/* ----------------------------------------------- */
+
+/* |-| HEADER */
+header {
+  background-color: var(--cerulean);
+  color: var(--papaya-whip);
+}
+
+.title-heading {
+  margin: 0;
+  padding: 1.5rem 1rem;
+  text-align: center;
+}
+
+/* |-| MAIN */
+main {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  border-top: 20px solid var(--jonquil);
+  border-bottom: 10px solid var(--rojo);
+}
+
+.data {
+  border-bottom: 1px solid #888;
+}
+
+.data h2,
+.weather h2 {
+  text-align: center;
+}
+
+.data table {
+  margin: 1.5rem auto;
+}
+
+.weather {
+  text-align: center;
+}
+
+.weather table {
+  margin: 1.5rem auto;
+}
+
+.right {
+  text-align: right;
+}
+
+/* |-| FOOTER */
+footer {
+  background-color: var(--cerulean);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+footer p {
+  color: var(--papaya-whip);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.last-modified::before {
+  content: "Modification: ";
+}
