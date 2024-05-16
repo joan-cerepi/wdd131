@@ -137,6 +137,7 @@ main h2 {
   border: 1px solid #777777a1;
   box-shadow: 1px 3px 5px #777777a1;
   transition: 0.3s ease-in-out;
+  padding-bottom: 1.2rem;
 }
 
 .temple-card:hover {
@@ -146,6 +147,10 @@ main h2 {
 .temple-info {
   list-style-type: none;
   line-height: 1.5;
+}
+
+.temple-card img {
+  border-radius: 5px;
 }
 
 /* ----------------------------------------------- */
