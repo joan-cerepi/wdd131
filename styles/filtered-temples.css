@@ -1,0 +1,159 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap");
+
+/* |-| CSS VARIABLES */
+:root {
+  /* Fonts */
+  --heading-font: Oswald, sans-serif;
+  --para-font: Asap, sans-serif;
+
+  /* Colors */
+  --cerulean: #086788;
+  --blue-green: #07a0c3;
+  --jonquil: #f0c808;
+  --papaya-whip: #fff1d0;
+  --rojo: #dd1c1a;
+  --white: #fff;
+  --midnight-green: #093e4a;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| GENERIC STYLING */
+
+* {
+  box-sizing: border-box;
+  font-family: var(--para-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+/* ----------------------------------------------- */
+
+/* |-| HEADER */
+
+header {
+  background-color: var(--cerulean);
+  color: var(--papaya-whip);
+  position: relative;
+}
+
+.title-heading {
+  margin: 0;
+  padding: 1rem;
+}
+
+.navigation {
+  display: none;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: var(--jonquil);
+}
+
+.show-links {
+  display: flex;
+}
+
+.navigation a {
+  color: var(--papaya-whip);
+  text-decoration: none;
+  padding: 1rem 1.3rem;
+  color: var(--midnight-green);
+  transition: 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+  background-color: var(--blue-green);
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* Hamburger menu */
+.container {
+  display: inline-block;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--papaya-whip);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+a.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| MAIN */
+main {
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+main h2 {
+  text-align: center;
+}
+
+.temples {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+}
+
+.temple-info {
+  list-style-type: none;
+  line-height: 1.5;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| FOOTER */
+footer {
+  background-color: var(--cerulean);
+  text-align: center;
+  padding: 0.5rem 0;
+  font-variant: small-caps;
+}
+
+footer p {
+  color: var(--papaya-whip);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.last-modified::before {
+  content: "Modification: ";
+}

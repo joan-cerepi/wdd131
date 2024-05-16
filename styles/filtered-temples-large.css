@@ -1,0 +1,43 @@
+@media screen and (min-width: 860px) {
+  .container {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .temples {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .temple-card img {
+    width: 350px;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .temples {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .temple-card img {
+    width: 400px;
+    height: auto;
+  }
+}

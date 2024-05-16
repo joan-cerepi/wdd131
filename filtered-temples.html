@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joan Cerepi">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Joan Cerepi - W02 Assignment Temple Album">
+
+  <!-- Open graph information -->
+  <meta property="og:title" content="Temples of the Church of Jesus Christ of Latter-day Saints">
+  <meta property="og:description"
+    content="Explore the sacred beauty and spiritual significance of LDS temples, where faithful members of The Church of Jesus Christ of Latter-day Saints gather to worship, make sacred covenants, and find peace amidst stunning architecture and serene surroundings.">
+  <meta property="og:image" content="images/oquirrh-mountain-utah-temple.webp">
+
+  <title>Temple Album - WDD 131: Dynamic Web Fundamentals - Joan Cerepi</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="title-heading">Temple Album</h1>
+    <div class="container" id="hamMenu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+    <nav class="navigation">
+      <a href="#" id="home">Home</a>
+      <a href="#" id="old">Old</a>
+      <a href="#" id="new">New</a>
+      <a href="#" id="large">Large</a>
+      <a href="#" id="small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Home</h2>
+    <section id="temples" class="temples"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> - Joan Cerepi - Idaho</p>
+    <p class="last-modified" id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
