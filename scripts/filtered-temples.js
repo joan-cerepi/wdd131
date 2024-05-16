@@ -100,8 +100,9 @@ const reset = () => {
 
 // Render all temple cards inside the HTML temple container.
 const renderTemples = (templeArr) => {
+  let templeCards = "";
   templeArr.forEach((temple) => {
-    const templeCard = `
+    templeCards += `
     <section class="temple-card">
       <h2>${temple.templeName}</h2>
       <ul class="temple-info">
@@ -109,54 +110,45 @@ const renderTemples = (templeArr) => {
         <li><b>Dedicated:</b> ${temple.dedicated}</li>
         <li><b>Size:</b> ${temple.area} sq feet</li>
       </ul>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="auto">
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="150">
     </section>
     `;
     // Render in html.
-    templeContainer.innerHTML += templeCard;
+    templeContainer.innerHTML = templeCards;
   });
 };
 
 renderTemples(temples);
 
 // Caching the DOM.
-const homeLink = document.getElementById("home");
-const oldTempleLink = document.getElementById("old");
-const newTempleLink = document.getElementById("new");
-const largeTempleLink = document.getElementById("large");
-const smallTempleLink = document.getElementById("small");
+const navigationBar = document.getElementById("navigation");
 
-oldTempleLink.addEventListener("click", () => {
-  const oldTemples = temples.filter((temple) => {
-    const yearDedicated = Number(temple.dedicated.split(",")[0]);
-    return yearDedicated < 1900;
-  });
+navigationBar.addEventListener("click", (event) => {
+  const target = event.target;
   reset();
-  renderTemples(oldTemples);
-});
-
-newTempleLink.addEventListener("click", () => {
-  const newTemples = temples.filter((temple) => {
-    const yearDedicated = Number(temple.dedicated.split(",")[0]);
-    return yearDedicated > 2000;
-  });
-  reset();
-  renderTemples(newTemples);
-});
-
-largeTempleLink.addEventListener("click", () => {
-  const largeTemples = temples.filter((temple) => temple.area > 90000);
-  reset();
-  renderTemples(largeTemples);
-});
-
-smallTempleLink.addEventListener("click", () => {
-  const smallTemples = temples.filter((temple) => temple.area < 10000);
-  reset();
-  renderTemples(smallTemples);
-});
-
-homeLink.addEventListener("click", () => {
-  reset();
-  renderTemples(temples);
+  switch (target.id) {
+    case "home":
+      renderTemples(temples);
+      break;
+    case "old":
+      const oldTemples = temples.filter(
+        (temple) => Number(temple.dedicated.split(",")[0]) < 1900
+      );
+      renderTemples(oldTemples);
+      break;
+    case "new":
+      const newTemples = temples.filter(
+        (temple) => Number(temple.dedicated.split(",")[0]) > 2000
+      );
+      renderTemples(newTemples);
+      break;
+    case "large":
+      const largeTemples = temples.filter((temple) => temple.area > 90000);
+      renderTemples(largeTemples);
+      break;
+    case "small":
+      const smallTemples = temples.filter((temple) => temple.area < 10000);
+      renderTemples(smallTemples);
+      break;
+  }
 });
