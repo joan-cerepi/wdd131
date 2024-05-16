@@ -110,7 +110,7 @@ const renderTemples = (templeArr) => {
         <li><b>Dedicated:</b> ${temple.dedicated}</li>
         <li><b>Size:</b> ${temple.area} sq feet</li>
       </ul>
-      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="150">
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="188">
     </section>
     `;
   });
