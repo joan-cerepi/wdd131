@@ -113,9 +113,9 @@ const renderTemples = (templeArr) => {
       <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="150">
     </section>
     `;
-    // Render in html.
-    templeContainer.innerHTML = templeCards;
   });
+  // Render in html.
+  templeContainer.innerHTML = templeCards;
 };
 
 renderTemples(temples);
