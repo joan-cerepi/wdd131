@@ -125,6 +125,7 @@ const navigationBar = document.getElementById("navigation");
 
 navigationBar.addEventListener("click", (event) => {
   const target = event.target;
+  event.preventDefault();
   reset();
   switch (target.id) {
     case "home":
