@@ -101,43 +101,19 @@ const reset = () => {
 // Render all temple cards inside the HTML temple container.
 const renderTemples = (templeArr) => {
   templeArr.forEach((temple) => {
-    // Create Elements.
-    const templeCard = document.createElement("section");
-    const templeName = document.createElement("h2");
-    const templeInfo = document.createElement("ul");
-    const location = document.createElement("li");
-    const dedicated = document.createElement("li");
-    const size = document.createElement("li");
-    const templeImage = document.createElement("img");
-
-    // Attributes.
-    // Temple Card and info.
-    templeCard.setAttribute("class", "temple-card");
-    templeInfo.setAttribute("class", "temple-info");
-
-    // Temple Image.
-    templeImage.setAttribute("src", temple.imageUrl);
-    templeImage.setAttribute("alt", temple.templeName);
-    templeImage.setAttribute("width", "300");
-    templeImage.setAttribute("height", "auto");
-    templeImage.setAttribute("loading", "lazy");
-
-    // Temple card content.
-    templeName.textContent = temple.templeName;
-    location.innerHTML = `<b>Location:</b> ${temple.location}`;
-    dedicated.innerHTML = `<b>Dedicated:</b> ${temple.dedicated}`;
-    size.innerHTML = `<b>Size:</b> ${temple.area} sq feet`;
-
-    // Append children.
-    templeCard.appendChild(templeName);
-    templeCard.appendChild(templeInfo);
-    templeInfo.appendChild(location);
-    templeInfo.appendChild(dedicated);
-    templeInfo.appendChild(size);
-    templeCard.appendChild(templeImage);
-
+    const templeCard = `
+    <section class="temple-card">
+      <h2>${temple.templeName}</h2>
+      <ul class="temple-info">
+        <li><b>Location:</b> ${temple.location}</li>
+        <li><b>Dedicated:</b> ${temple.dedicated}</li>
+        <li><b>Size:</b> ${temple.area} sq feet</li>
+      </ul>
+      <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="300" height="auto">
+    </section>
+    `;
     // Render in html.
-    templeContainer.appendChild(templeCard);
+    templeContainer.innerHTML += templeCard;
   });
 };
 
