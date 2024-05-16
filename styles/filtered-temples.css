@@ -133,6 +133,16 @@ main h2 {
   text-align: center;
 }
 
+.temple-card {
+  border: 1px solid #777777a1;
+  box-shadow: 1px 3px 5px #777777a1;
+  transition: 0.3s ease-in-out;
+}
+
+.temple-card:hover {
+  transform: scale(1.1);
+}
+
 .temple-info {
   list-style-type: none;
   line-height: 1.5;
