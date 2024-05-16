@@ -102,7 +102,7 @@ const reset = () => {
 const renderTemples = (templeArr) => {
   templeArr.forEach((temple) => {
     // Create Elements.
-    const templeCard = document.createElement("div");
+    const templeCard = document.createElement("section");
     const templeName = document.createElement("h2");
     const templeInfo = document.createElement("ul");
     const location = document.createElement("li");
