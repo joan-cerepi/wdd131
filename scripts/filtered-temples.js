@@ -103,6 +103,22 @@ const renderTemples = (templeArr) => {
   templeContainer.innerHTML = templeCards;
 };
 
+// Return array of temples built before 1900.
+const filterOldTemples = (temples) =>
+  temples.filter((temple) => new Date(temple.dedicated).getFullYear() < 1900);
+
+// Return array of temples built after 2000.
+const filterNewTemples = (temples) =>
+  temples.filter((temple) => new Date(temple.dedicated).getFullYear() > 2000);
+
+// Return array of temples larger than 90000 sq feet.
+const filterLargeTemples = (temples) =>
+  temples.filter((temple) => temple.area > 90000);
+
+// Return array of temples smaller than 10000 sq feet.
+const filterSmallTemples = (temples) =>
+  temples.filter((temple) => temple.area < 10000);
+
 // Caching the DOM.
 const navigationBar = document.getElementById("navigation");
 const filterTitle = document.getElementById("filter-title");
@@ -118,26 +134,22 @@ navigationBar.addEventListener("click", (event) => {
       break;
     case "old":
       filterTitle.textContent = "Old";
-      const oldTemples = temples.filter(
-        (temple) => Number(temple.dedicated.split(",")[0]) < 1900
-      );
+      const oldTemples = filterOldTemples(temples);
       renderTemples(oldTemples);
       break;
     case "new":
       filterTitle.textContent = "New";
-      const newTemples = temples.filter(
-        (temple) => Number(temple.dedicated.split(",")[0]) > 2000
-      );
+      const newTemples = filterNewTemples(temples);
       renderTemples(newTemples);
       break;
     case "large":
       filterTitle.textContent = "Large";
-      const largeTemples = temples.filter((temple) => temple.area > 90000);
+      const largeTemples = filterLargeTemples(temples);
       renderTemples(largeTemples);
       break;
     case "small":
       filterTitle.textContent = "Small";
-      const smallTemples = temples.filter((temple) => temple.area < 10000);
+      const smallTemples = filterSmallTemples(temples);
       renderTemples(smallTemples);
       break;
   }
