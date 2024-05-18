@@ -1,12 +1,4 @@
-// Caching the DOM.
-const hamMenu = document.getElementById("hamMenu");
-const navigation = document.querySelector(".navigation");
-
-hamMenu.addEventListener("click", () => {
-  hamMenu.classList.toggle("change");
-  navigation.classList.toggle("show-links");
-});
-
+// Assign all temple objects to array.
 const temples = [
   {
     templeName: "Aba Nigeria",
@@ -90,16 +82,9 @@ const temples = [
   },
 ];
 
-// Caching the DOM.
-const templeContainer = document.getElementById("temples");
-
-// Remove children from temple card container.
-const reset = () => {
-  templeContainer.innerHTML = "";
-};
-
 // Render all temple cards inside the HTML temple container.
 const renderTemples = (templeArr) => {
+  const templeContainer = document.getElementById("temples");
   let templeCards = "";
   templeArr.forEach((temple) => {
     templeCards += `
@@ -118,8 +103,6 @@ const renderTemples = (templeArr) => {
   templeContainer.innerHTML = templeCards;
 };
 
-renderTemples(temples);
-
 // Caching the DOM.
 const navigationBar = document.getElementById("navigation");
 const filterTitle = document.getElementById("filter-title");
@@ -127,7 +110,7 @@ const filterTitle = document.getElementById("filter-title");
 navigationBar.addEventListener("click", (event) => {
   const target = event.target;
   event.preventDefault();
-  reset();
+
   switch (target.id) {
     case "home":
       filterTitle.textContent = "Home";
@@ -159,3 +142,5 @@ navigationBar.addEventListener("click", (event) => {
       break;
   }
 });
+
+renderTemples(temples);
