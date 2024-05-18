@@ -122,6 +122,7 @@ renderTemples(temples);
 
 // Caching the DOM.
 const navigationBar = document.getElementById("navigation");
+const filterTitle = document.getElementById("filter-title");
 
 navigationBar.addEventListener("click", (event) => {
   const target = event.target;
@@ -129,25 +130,30 @@ navigationBar.addEventListener("click", (event) => {
   reset();
   switch (target.id) {
     case "home":
+      filterTitle.textContent = "Home";
       renderTemples(temples);
       break;
     case "old":
+      filterTitle.textContent = "Old";
       const oldTemples = temples.filter(
         (temple) => Number(temple.dedicated.split(",")[0]) < 1900
       );
       renderTemples(oldTemples);
       break;
     case "new":
+      filterTitle.textContent = "New";
       const newTemples = temples.filter(
         (temple) => Number(temple.dedicated.split(",")[0]) > 2000
       );
       renderTemples(newTemples);
       break;
     case "large":
+      filterTitle.textContent = "Large";
       const largeTemples = temples.filter((temple) => temple.area > 90000);
       renderTemples(largeTemples);
       break;
     case "small":
+      filterTitle.textContent = "Small";
       const smallTemples = temples.filter((temple) => temple.area < 10000);
       renderTemples(smallTemples);
       break;
