@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/* |-| CSS VARIABLES */
+:root {
+  /* Fonts */
+  --heading-font: Oswald, sans-serif;
+  --para-font: Asap, sans-serif;
+
+  /* Colors */
+  --cerulean: #086788;
+  --blue-green: #07a0c3;
+  --jonquil: #f0c808;
+  --papaya-whip: #fff1d0;
+  --rojo: #dd1c1a;
+  --white: #fff;
+  --midnight-green: #093e4a;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| GENERIC STYLES */
+* {
+  box-sizing: border-box;
+  font-family: var(--para-font);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+/* ----------------------------------------------- */
+
+/* |-| HEADER */
+header {
+  background-color: var(--cerulean);
+}
+
+h1 {
+  text-align: center;
+  color: var(--papaya-whip);
+  margin: 0;
+  padding: 2rem 0;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| MAIN */
+
+main {
+  background-color: var(--papaya-whip);
+  padding: 2rem;
+  font-size: 1.4rem;
+  width: 50%;
+  margin: 10.5rem auto;
+  text-align: center;
+  border-radius: 5px;
+}
+
+/* ----------------------------------------------- */
+
+/* |-| FOOTER */
+footer {
+  background-color: var(--cerulean);
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+footer p {
+  color: var(--papaya-whip);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.last-modified::before {
+  content: "Modification: ";
+}

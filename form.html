@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joan Cerepi">
+  <meta name="description" content="WDD 131 - Dynamic Web Fundamentals - Joan Cerepi - Product Review Form">
+
+  <title>Product Review Form - WDD 131: Dynamic Web Fundamentals - Joan Cerepi</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="icon" href="favicon.ico">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <link rel="stylesheet" href="styles/form-large.css">
+
+
+  <!-- JavaScript -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+
+  <form method="get" action="review.html" class="review-form">
+    <h2>
+      <label for="products">Product Name <span class="red">*</span></label>
+    </h2>
+    <select name="products" id="products" required>
+      <option value="" selected disabled>Choose a Product ...</option>
+    </select>
+
+    <div class="rating">
+      <h2>Overall Rating <span class="red">*</span></h2>
+      <div class="rating-btns">
+        <label for="one-star">&star;</label>
+        <input type="radio" name="rating" id="one-star" value="&star;" required>
+      </div>
+      <div class="rating-btns">
+        <label for="two-stars">&star;&star;</label>
+        <input type="radio" name="rating" id="two-stars" value="&star;&star;" required>
+      </div>
+      <div class="rating-btns">
+        <label for="three-stars">&star;&star;&star;</label>
+        <input type="radio" name="rating" id="three-stars" value="&star;&star;&star;" required>
+      </div>
+      <div class="rating-btns">
+        <label for="four-stars">&star;&star;&star;&star;</label>
+        <input type="radio" name="rating" id="four-stars" value="&star;&star;&star;&star;" required>
+      </div>
+      <div class="rating-btns">
+        <label for="five-stars">&star;&star;&star;&star;&star;</label>
+        <input type="radio" name="rating" id="five-stars" value="&star;&star;&star;&star;&star;" required>
+      </div>
+    </div>
+
+    <div class="install-date">
+      <h2>
+        <label for="date-field">Date of Installation <span class="red">*</span></label>
+      </h2>
+      <input type="date" name="install-date" id="date-field" required>
+    </div>
+
+    <div class="useful-features">
+      <h2>Which features did you find useful in the product? (Check all that apply)</h2>
+      <div class="feature-checkboxes">
+        <input type="checkbox" name="durability" id="durability" value="Durability">
+        <label for="durability">Durability</label>
+      </div>
+
+      <div class="feature-checkboxes">
+        <input type="checkbox" name="ease-of-use" id="ease-of-use" value="Ease of Use">
+        <label for="ease-of-use">Ease of Use</label>
+      </div>
+
+      <div class="feature-checkboxes">
+        <input type="checkbox" name="performance" id="performance" value="Performance">
+        <label for="performance">Performance</label>
+      </div>
+
+      <div class="feature-checkboxes">
+        <input type="checkbox" name="design" id="design" value="Design">
+        <label for="design">Design</label>
+      </div>
+    </div>
+
+    <div class="written-review">
+      <h2>
+        <label for="review-box">Written Review <span class="optional">(Optional)</span></label>
+      </h2>
+      <textarea id="review-box" name="review-box" rows="7"></textarea>
+    </div>
+
+    <div class="username">
+      <h2>
+        <label for="name">Your Name <span class="optional">(Optional)</span></label>
+      </h2>
+      <input type="text" id="name" name="name" autocomplete="off">
+    </div>
+
+    <input type="submit" value="Post Review" class="submit-btn">
+  </form>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> - Joan Cerepi - Idaho</p>
+    <p class="last-modified" id="lastModified"></p>
+  </footer>
+</body>
+
+</html>
