@@ -1,0 +1,15 @@
+@media screen and (min-width: 820px) {
+  .color-name {
+    bottom: -1.5rem;
+  }
+
+  .desktop-wf {
+    width: 851px;
+    height: auto;
+  }
+
+  .mobile-wf {
+    width: 853px;
+    height: auto;
+  }
+}
