@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Joan Cerepi">
+  <meta name="description"
+    content="Discover delightful culinary adventures with our diverse collection of mouthwatering recipes! From quick and easy meals to gourmet delights, explore a world of flavors and inspiration to elevate your cooking game. Whether you're a novice or a seasoned chef, find the perfect dish to tantalize your taste buds and impress your guests.">
+  <meta name="keywords"
+    content="cooking, chef, food, health, recipes, culinary, cuisine, kitchen, ingredients, meal ideas, gourmet, quick recipes, easy recipes, healthy eating, vegetarian, vegan, desserts, appetizers, dinner ideas, breakfast recipes, cooking tips, seasonal recipes">
+
+  <!-- Open graph meta tags -->
+
+
+  <title>Home Chef Haven | Taste the Adventure</title>
+
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="manifest" href="images/site.webmanifest">
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-config" content="images/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/header-footer.css">
+  <link rel="stylesheet" href="styles/header-footer-large.css">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/base-large.css">
+
+  <!-- JavaScript -->
+  <script src="scripts/getdates.js" defer></script>
+  <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html"><img src="images/logo.webp" alt="home chef haven logo" width="400" height="100"
+        class="logo"></a>
+    <div class="hamburger-menu">
+      <div class="bar1"></div>
+      <div class="bar2"></div>
+      <div class="bar3"></div>
+    </div>
+  </header>
+
+  <nav class="nav">
+    <a href="index.html">HOME</a>
+    <a href="recipes.html">RECIPES</a>
+    <a href="#">RANDOMIZER</a>
+    <a href="#">CONTACT</a>
+  </nav>
+
+  <main class="main">
+    <section class="hero">
+      <picture>
+        <source srcset="images/hero-desktop.webp" media="(min-width: 720px)">
+        <img src="images/hero-mobile.webp" alt="food hero image" width="100%" height="auto" class="hero-image">
+      </picture>
+      <div class="hero-content">
+        <h1>Home Chef Haven</h1>
+        <a href="recipes.html" class="hero-btn">Look Up Recipes</a>
+      </div>
+    </section>
+    <section class="food-images">
+      <h2>Your Adventure Awaits</h2>
+      <figure>
+        <img src="images/food-image-1.webp" alt="food image 1" loading="lazy" width="800" height="800">
+      </figure>
+      <figure>
+        <img src="images/food-image-2.webp" alt="food image 2" loading="lazy" width="800" height="800">
+      </figure>
+      <figure>
+        <img src="images/food-image-3.webp" alt="food image 3" loading="lazy" width="800" height="800">
+      </figure>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; <span id="current-year"></span> All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

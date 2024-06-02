@@ -1,0 +1,71 @@
+@charset "utf-8";
+
+/* |-| VARIABLES */
+:root {
+  /* Fonts */
+  --heading-font: "Roboto Condensed", sans-serif;
+  --other-text: abel, sans-serif;
+
+  /* Colors */
+  --uranian-blue: #add3ea;
+  --kobicha: #5d401f;
+  --carrot-orange: #e48d20;
+  --alabaster: #edeae1;
+  --payne-gray: #4d667d;
+}
+
+/* |-| GENERIC STYLES */
+* {
+  box-sizing: border-box;
+  font-family: var(--other-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--kobicha);
+}
+
+body {
+  max-width: 2500px;
+  margin: 0 auto;
+}
+
+/* |-| MAIN */
+.hero-content {
+  margin: 3.5rem 0;
+  text-align: center;
+}
+
+.hero-btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: var(--carrot-orange);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  color: navy;
+  font-weight: 700;
+}
+
+.hero-btn:hover {
+  background-color: #eb8921dd;
+}
+
+.food-images {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 3rem 0;
+  padding: 3rem 0;
+  border-top: 3px ridge #777;
+  border-bottom: 3px ridge #777;
+  text-align: center;
+}
+
+.food-images img {
+  width: 90%;
+  height: auto;
+}

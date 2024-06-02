@@ -1,0 +1,77 @@
+/* |-| HEADER */
+.header {
+  background-color: var(--uranian-blue);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+.hamburger-menu {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: var(--kobicha);
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* |-| NAV */
+.nav {
+  background-color: var(--payne-gray);
+  display: none;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+  padding: 1rem 1.3rem;
+}
+
+.nav a:hover {
+  background-color: #fff;
+  color: #000;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.show {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* |-| FOOTER */
+.footer {
+  background-color: var(--uranian-blue);
+  text-align: center;
+  padding: 0.5rem 0;
+  color: var(--kobicha);
+}
