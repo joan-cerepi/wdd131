@@ -10,7 +10,7 @@ const renderRecipeHTML = (recipeArr) => {
     html += `
       <div class='recipe'>
         <a href="${recipe.recipe.url}">
-          <img src="${recipe.recipe.images.THUMBNAIL.url}" alt="${recipe.recipe.label}" width="100" height="100">
+          <img src="${recipe.recipe.images.THUMBNAIL.url}" alt="${recipe.recipe.label}" loading="lazy" width="100" height="100">
           <span class="recipe-label">${recipe.recipe.label}</span>
         </a>
       </div>
