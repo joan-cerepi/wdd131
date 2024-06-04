@@ -10,10 +10,8 @@
   <meta name="keywords"
     content="cooking, chef, food, health, recipes, culinary, cuisine, kitchen, ingredients, meal ideas, gourmet, quick recipes, easy recipes, healthy eating, vegetarian, vegan, desserts, appetizers, dinner ideas, breakfast recipes, cooking tips, seasonal recipes">
 
-  <!-- Open graph meta tags -->
 
-
-  <title>Home Chef Haven | Taste the Adventure</title>
+  <title>Home Chef Haven | Contact</title>
 
   <!-- Favicon -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -28,10 +26,9 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/contact.css">
   <link rel="stylesheet" href="styles/header-footer.css">
   <link rel="stylesheet" href="styles/header-footer-large.css">
-  <link rel="stylesheet" href="styles/base.css">
-  <link rel="stylesheet" href="styles/base-large.css">
 
   <!-- JavaScript -->
   <script src="scripts/getdates.js" defer></script>
@@ -57,28 +54,21 @@
   </nav>
 
   <main class="main">
-    <section class="hero">
-      <picture>
-        <source srcset="images/hero-desktop.webp" media="(min-width: 720px)">
-        <img src="images/hero-mobile.webp" alt="food hero image" width="100%" height="auto" class="hero-image">
-      </picture>
-      <div class="hero-content">
-        <h1>Home Chef Haven</h1>
-        <a href="recipes.html" class="hero-btn">Look Up Recipes</a>
+    <form action="confirmation.html" method="get">
+      <div class="form-field">
+        <label for="name">Name:</label>
+        <input type="text" name="name" class="name" id="name">
       </div>
-    </section>
-    <section class="food-images">
-      <h2>Your Adventure Awaits</h2>
-      <figure>
-        <img src="images/food-image-1.webp" alt="food image 1" loading="lazy" width="800" height="800">
-      </figure>
-      <figure>
-        <img src="images/food-image-2.webp" alt="food image 2" loading="lazy" width="800" height="800">
-      </figure>
-      <figure>
-        <img src="images/food-image-3.webp" alt="food image 3" loading="lazy" width="800" height="800">
-      </figure>
-    </section>
+      <div class="form-field">
+        <label for="email">Email:</label>
+        <input type="email" name="email" class="email" id="email">
+      </div>
+      <div class="form-field">
+        <label for="message">Message: *</label>
+        <textarea id="message" class="message" name="message" required></textarea>
+      </div>
+      <input type="submit" value="Send Message">
+    </form>
   </main>
 
   <footer class="footer">

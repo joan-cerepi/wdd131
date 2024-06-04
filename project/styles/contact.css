@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+/* |-| VARIABLES */
+:root {
+  /* Fonts */
+  --heading-font: "Roboto Condensed", sans-serif;
+  --other-text: abel, sans-serif;
+
+  /* Colors */
+  --uranian-blue: #add3ea;
+  --kobicha: #5d401f;
+  --carrot-orange: #e48d20;
+  --alabaster: #edeae1;
+  --payne-gray: #4d667d;
+}
+
+/* |-| GENERIC STYLES */
+* {
+  box-sizing: border-box;
+  font-family: var(--other-text);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+}
+
+form {
+  width: 50%;
+  margin: 2rem auto;
+  text-align: center;
+  border: 5px ridge var(--kobicha);
+  padding: 1rem;
+}
+
+.form-field {
+  margin: 2rem 0;
+}
+
+.form-field label {
+  display: block;
+}
+
+.form-field input {
+  min-height: 44px;
+}
+
+.message {
+  width: 50%;
+  height: 10rem;
+}
